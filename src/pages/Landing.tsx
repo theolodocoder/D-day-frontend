@@ -13,18 +13,28 @@ export default function Landing() {
             <li>Contact us</li>
           </ul>
         </nav>
-        <main className="absolute top-1/4 translate-y-1/2">
-          <div className="mb-5 font-semibold text-7xl">
-            <h1 className="">Welcome to </h1>
-            <h1 className="text-[#05f900] italic">D-day</h1>
+        <main className="flex justify-between items-center w-full h-[70%] ">
+          <div className="">
+            <div className="mb-10 font-semibold text-8xl">
+              <h1 className="">Welcome to</h1>
+              <h1 className="text-[#05f900] italic">D-day</h1>
+            </div>
+            <div className="flex gap-x-3">
+              <button className="border border-white h-14 w-40 px-4 py-2 rounded-full">
+                <Link to={"/login"}>Login</Link>
+              </button>
+              <button className="h-14 w-40 px-4 py-2 rounded-full bg-[#05F900] text-black font-semibold">
+                Get Started
+              </button>
+            </div>
           </div>
-          <div className="flex gap-x-3">
-            <button className="border border-white h-12 w-40 px-4 py-2 rounded-full">
-              <Link to={"/login"}>Login</Link>
-            </button>
-            <button className="h-12 w-40 px-4 py-2 rounded-full bg-[#05F900] text-black font-semibold">
-              Get Started
-            </button>
+          <div className="relative">
+            <div className="absolute inset-0 -left-20 top-14 w-[450px] h-[450px] border-2 border-[#05f900] rounded-full ring-2 ring-[#05f900] ring-offset-black ring-offset-[30px]"></div>
+            <img
+              src="/clock.svg"
+              alt="clock-image"
+              className="tranform scale-90"
+            />
           </div>
         </main>
         <footer>
