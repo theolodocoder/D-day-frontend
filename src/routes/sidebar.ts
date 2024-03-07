@@ -1,13 +1,11 @@
-import { FC } from "react";
 export interface routeItem {
   path: string;
-  icon?: FC;
+  icon?: React.ReactNode;
   name: string;
 }
 const routes: routeItem[] = [
   {
     path: "/app/dashboard",
-    // icon: Squares2X2Icon,
     name: "Dashboard",
   },
   {

@@ -1,15 +1,18 @@
 // src/App.tsx
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./pages/ErrorPage";
 import Landing from "./pages/Landing";
+import Layout from "./containers/Layout";
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Landing />,
-      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/app*",
+      element: <Layout />,
     },
     {
       path: "/forgot-password",
@@ -18,7 +21,7 @@ const App: React.FC = () => {
   ]);
 
   return (
-    <div>
+    <div className="w-screen h-screen">
       <RouterProvider router={router} />
     </div>
   );
