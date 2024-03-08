@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Dashboard from "../pages/Dashboard";
-import TodaysEvent from "../pages/TodaysEvent";
+import TodaysEvent from "../pages/Event";
 import UpcomingEvents from "../pages/UpcomingEvents";
 import PastEvents from "../pages/PastEvents";
 import AddEvents from "../pages/AddEvents";
@@ -16,7 +16,7 @@ const routes: routeItem[] = [
     component: Dashboard,
   },
   {
-    path: "/today-events",
+    path: "/events",
     component: TodaysEvent,
   },
   {

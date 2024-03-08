@@ -1,0 +1,62 @@
+[
+  {
+    "name": "John Doe",
+    "event": "Birthday",
+    "date": "2024-03-15T00:00:00.000Z",
+    "status": "Sent"
+  },
+  {
+    "name": "Jane Smith",
+    "event": "Anniversary",
+    "date": "2024-04-20T00:00:00.000Z",
+    "status": "Pending"
+  },
+  {
+    "name": "Alice Johnson",
+    "event": "Birthday",
+    "date": "2024-05-10T00:00:00.000Z",
+    "status": "Sent"
+  },
+  {
+    "name": "Bob Brown",
+    "event": "Birthday",
+    "date": "2024-06-05T00:00:00.000Z",
+    "status": "Pending"
+  },
+  {
+    "name": "Emily Davis",
+    "event": "Anniversary",
+    "date": "2024-07-18T00:00:00.000Z",
+    "status": "Sent"
+  },
+  {
+    "name": "Michael Wilson",
+    "event": "Birthday",
+    "date": "2024-08-22T00:00:00.000Z",
+    "status": "Pending"
+  },
+  {
+    "name": "Olivia Martinez",
+    "event": "Anniversary",
+    "date": "2024-09-30T00:00:00.000Z",
+    "status": "Sent"
+  },
+  {
+    "name": "William Taylor",
+    "event": "Birthday",
+    "date": "2024-10-12T00:00:00.000Z",
+    "status": "Sent"
+  },
+  {
+    "name": "Sophia Anderson",
+    "event": "Anniversary",
+    "date": "2024-11-25T00:00:00.000Z",
+    "status": "Pending"
+  },
+  {
+    "name": "Daniel Thomas",
+    "event": "Birthday",
+    "date": "2024-12-03T00:00:00.000Z",
+    "status": "Sent"
+  }
+]

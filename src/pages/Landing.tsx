@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Clock from "../components/Clock";
 
 export default function Landing() {
   return (
@@ -28,14 +29,7 @@ export default function Landing() {
               </button>
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 -left-20 top-14 w-[450px] h-[450px] border-2 border-[#05f900] rounded-full ring-2 ring-[#05f900] ring-offset-black ring-offset-[30px]"></div>
-            <img
-              src="/clock.svg"
-              alt="clock-image"
-              className="tranform scale-90"
-            />
-          </div>
+          <Clock />
         </main>
         <footer>
           <p className="absolute bottom-10 right-10 cursor-pointer text-sm text-shadow z-10 opacity-70">

@@ -1,27 +1,39 @@
+import { IconType } from "react-icons";
+import { MdOutlineDashboard } from "react-icons/md";
+import { MdOutlineCalendarMonth } from "react-icons/md";
+import { PiClockClockwise } from "react-icons/pi";
+import { PiClockCounterClockwise } from "react-icons/pi";
+import { MdAddCircle } from "react-icons/md";
+
 export interface routeItem {
   path: string;
-  icon?: React.ReactNode;
+  icon?: IconType;
   name: string;
 }
 const routes: routeItem[] = [
   {
     path: "/app/dashboard",
+    icon: MdOutlineDashboard,
     name: "Dashboard",
   },
   {
-    path: "/app/todays-events",
-    name: "Todays Events",
+    path: "/app/events",
+    icon: MdOutlineCalendarMonth,
+    name: "Events",
   },
   {
     path: "/app/upcoming-events",
+    icon: PiClockClockwise,
     name: "Upcoming Events",
   },
   {
     path: "/app/past-events",
+    icon: PiClockCounterClockwise,
     name: "Past Events",
   },
   {
     path: "/app/add-events",
+    icon: MdAddCircle,
     name: "Add Events",
   },
 ];

@@ -1,11 +1,9 @@
-import { PiSquaresFour } from "react-icons/pi";
-import { NavLink, useLocation } from "react-router-dom";
+import { LiaSignOutAltSolid } from "react-icons/lia";
+import { NavLink } from "react-router-dom";
 import routes from "../routes/sidebar";
 import ProfileAvatar from "./ProfileAvatar";
-import { LiaSignOutAltSolid } from "react-icons/lia";
 
 const Sidebar = () => {
-  const location = useLocation();
   return (
     <div className="w-32 h-full bg-black text-sm py-10 flex text-gray-300 justify-center">
       <ul className="mx-auto text-center flex flex-col gap-y-16 min-h-full">
@@ -28,7 +26,7 @@ const Sidebar = () => {
                   }
                 >
                   <div className="flex flex-col items-center gap-y-2 mt-10">
-                    <PiSquaresFour fontSize={"28px"} />
+                    {route?.icon && route.icon({ size: 24 })}
                     <p className="text-[11px]">{route.name}</p>
                   </div>
                   {/* {location.pathname === route.path ? (
