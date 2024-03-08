@@ -1,8 +1,25 @@
+import React, { useEffect, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import EventList from "./components/EventList";
-// import { useFetchData } from "../../hooks/useFetchData";
+import EventCard from "./components/EventCard";
 
 const Event = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [expanded, setExpanded] = useState<boolean>(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleToggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
+  useEffect(() => {
+    if (expanded) {
+      inputRef.current?.focus();
+    }
+  }, [expanded]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <div className="flex gap-x-[10%] w-full">
       <div className="w-[60%] flex flex-col gap-y-32">
@@ -24,11 +41,30 @@ const Event = () => {
               </p>
             </div>
             {/* search icon */}
-            <div className="w-12 h-12 rounded-full bg-gray-400 flex justify-center items-center cursor-pointer">
-              <FiSearch fontSize={"24px"} color="black" fontWeight={800} />
+            <div className="flex items-center gap-x-3">
+              {expanded ? (
+                <input
+                  ref={expanded && inputRef}
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleChange}
+                  className="bg-transparent w-80 h-12 px-2 border-b border-b-gray-200 text-white outline-none"
+                  placeholder="Search..."
+                />
+              ) : null}
+              <div
+                className="w-12 h-12 rounded-full bg-[#BFC4CB] flex justify-center items-center cursor-pointer"
+                onClick={handleToggleExpand}
+              >
+                <FiSearch fontSize={"24px"} color="black" fontWeight={800} />
+              </div>
             </div>
           </div>
-          <EventList />
+          <div>
+            {/* {events.map((eve) => (
+            <EventCard key={eve.id}  />
+          ))} */}
+          </div>
         </div>
       </div>
       <div className="bg-red-400">Left</div>

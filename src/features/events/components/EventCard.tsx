@@ -1,6 +1,4 @@
-import { EventItem } from "../../../utils/types";
-
-const EventCard = ({ event }: EventItem) => {
+const EventCard = () => {
   return <>Item</>;
 };
 

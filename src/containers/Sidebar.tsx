@@ -13,7 +13,7 @@ const Sidebar = () => {
         <li className="flex flex-col h-full justify-between">
           <div>
             {routes.map((route, k) => (
-              <li key={k}>
+              <div key={k}>
                 <NavLink
                   end
                   to={route.path}
@@ -36,11 +36,11 @@ const Sidebar = () => {
                     ></span>
                   ) : null} */}
                 </NavLink>
-              </li>
+              </div>
             ))}
           </div>
           <div>
-            <li>
+            <div>
               <NavLink
                 end
                 to={"/sign-out"}
@@ -55,7 +55,7 @@ const Sidebar = () => {
                   Sign out
                 </div>
               </NavLink>
-            </li>
+            </div>
           </div>
         </li>
       </ul>
