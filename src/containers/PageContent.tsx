@@ -3,7 +3,7 @@ import routes from "../routes";
 
 const PageContent = () => {
   return (
-    <div className="bg-[#059301] flex w-full text-white">
+    <div className="bg-[#059301] flex w-full text-white items-center">
       <div className="mx-auto min-w-[90%]">
         <Routes>
           {routes.map((route, index) => (

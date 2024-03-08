@@ -25,7 +25,7 @@ const Event = () => {
       <div className="w-[60%] flex flex-col gap-y-32">
         <div className="flex gap-x-10 items-center">
           <div>
-            <h1 className="text-5xl font-semibold mb-3">Good Morning,</h1>
+            <h1 className="text-5xl font-semibold mb-2">Good Morning,</h1>
             <p className="font-extralight">
               Idris, Hope you’re having a great day
             </p>
@@ -35,9 +35,9 @@ const Event = () => {
         <div>
           <div className="flex justify-between">
             <div>
-              <h1 className="text-[22px] mb-1 font-semibold">Good Morning,</h1>
-              <p className="font-extralight text-[12px]">
-                Idris, Hope you’re having a great day
+              <h1 className="text-[24px] mb-1 font-semibold">Todays Events,</h1>
+              <p className="font-extralight text-sm">
+                You have (19) events today
               </p>
             </div>
             {/* search icon */}
@@ -60,14 +60,16 @@ const Event = () => {
               </div>
             </div>
           </div>
-          <div>
-            {/* {events.map((eve) => (
-            <EventCard key={eve.id}  />
-          ))} */}
+          <div className="mt-10">
+            {Array(5)
+              .fill(null)
+              .map((_, idx) => (
+                <EventCard key={idx} id={idx} />
+              ))}
           </div>
         </div>
       </div>
-      <div className="bg-red-400">Left</div>
+      <div className="">Left</div>
     </div>
   );
 };
