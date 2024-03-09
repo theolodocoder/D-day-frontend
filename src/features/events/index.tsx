@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import EventCard from "./components/EventCard";
+import Button from "../../components/Button";
+import { MdAddCircle } from "react-icons/md";
 
 const Event = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -21,8 +23,8 @@ const Event = () => {
   };
 
   return (
-    <div className="flex gap-x-[10%] w-full">
-      <div className="w-[60%] flex flex-col gap-y-32">
+    <div className="flex gap-x-[20%] w-full">
+      <div className="w-[50%] flex flex-col gap-y-20">
         <div className="flex gap-x-10 items-center">
           <div>
             <h1 className="text-5xl font-semibold mb-2">Good Morning,</h1>
@@ -67,9 +69,14 @@ const Event = () => {
                 <EventCard key={idx} id={idx} />
               ))}
           </div>
+          <div className="flex w-full justify-end mt-4 cursor-pointer">
+            <a>View More</a>
+          </div>
         </div>
       </div>
-      <div className="">Left</div>
+      <div className="">
+        <Button content={"Add Event"} icon={MdAddCircle} other="bg-white" />
+      </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Clock from "../components/Clock";
+import Button from "../components/Button";
 
 export default function Landing() {
   return (
@@ -21,12 +22,8 @@ export default function Landing() {
               <h1 className="text-[#05f900] italic">D-day</h1>
             </div>
             <div className="flex gap-x-3">
-              <button className="border border-white h-14 w-40 px-4 py-2 rounded-full">
-                <Link to={"/login"}>Login</Link>
-              </button>
-              <button className="h-14 w-40 px-4 py-2 rounded-full bg-[#05F900] text-black font-semibold">
-                Get Started
-              </button>
+              <Button content="Login" variant="transparent" />
+              <Button content="Get Started" />
             </div>
           </div>
           <Clock />

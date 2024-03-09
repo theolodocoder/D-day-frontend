@@ -2,17 +2,11 @@ import { BsDot, BsSend } from "react-icons/bs";
 
 const colors = ["red", "gray", "purple", "pink", "lightblue"];
 
-const EventCard = ({ id }) => {
-  const getRandColor = () => {
-    const rand: number = Math.floor(Math.random() * colors.length - 1);
-    return colors[rand];
-  };
-
-  // console.log(getRandColor());
+const EventCard = ({ id }: { id: number }) => {
   return (
-    <div className="flex items-center gap-x-5 bg-[#E3EBF6CC] mt-5 rounded-xl text-black p-4 cursor-pointer">
+    <div className="flex items-center gap-x-5 bg-[#E3EBF6CC] mt-3  rounded-xl text-black p-4 cursor-pointer">
       <div
-        className={`flex items-center justify-center w-14 h-14 rounded-full bg-${colors[id]}-600 text-white font-bold`}
+        className={`flex items-center justify-center w-14 h-14 rounded-full bg-${colors[id]}-400 text-white font-bold`}
       >
         SE
       </div>
