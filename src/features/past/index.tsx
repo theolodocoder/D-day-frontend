@@ -10,7 +10,13 @@ const PastEvents = () => {
   };
 
   return (
-    <div className="flex gap-x-[10%] w-full h-full">
+    <div className="flex gap-x-[10%] w-full h-full relative">
+      {/* medium circle svg */}
+      <img
+        src="/mdCircle.svg"
+        alt="medium-circle-svg"
+        className="absolute -right-[180px] -top-[100px]"
+      />
       <div className="w-[60%] flex flex-col gap-y-5 h-full">
         <div className="flex justify-between items-center">
           <div>

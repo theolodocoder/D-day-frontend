@@ -16,8 +16,8 @@ export default function EventDetails({ type }: EventDetailsProps) {
   };
 
   return (
-    <div className="w-full relative h-[534px] bg-[#E3EBF6CC] rounded-bl-3xl rounded-br-3xl flex justify-center items-center text-black">
-      <div className="w-56 h-56 rounded-full absolute -top-28 left-1/2 transform -translate-x-1/2 bg-gray-400 flex items-center justify-center font-bold text-6xl">
+    <div className="w-full relative h-[534px] bg-[#E3EBF6CC] rounded-bl-3xl rounded-br-3xl flex justify-center items-center text-black mt-10">
+      <div className="w-52 h-52 rounded-full absolute -top-28 left-1/2 transform -translate-x-1/2 bg-gray-400 flex items-center justify-center font-bold text-6xl">
         SE
       </div>
       <div className="w-full flex flex-col items-center">

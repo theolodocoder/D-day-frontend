@@ -2,10 +2,17 @@ import { MdAddCircle } from "react-icons/md";
 import Button from "../../components/Button";
 import Upload from "../../components/Upload";
 import Clock from "../../components/Clock";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
     <div className="flex gap-x-[10%] w-full relative">
+      {/* Small circle svg br */}
+      <img
+        src="/smCircle.svg"
+        alt="small-circle-svg"
+        className="absolute -left-[180px] -bottom-[180px] transform rotate-12"
+      />
       <div className="w-[40%] flex flex-col gap-y-20">
         <div className="flex gap-x-5 items-center">
           <div>
@@ -21,7 +28,9 @@ const Dashboard = () => {
           <Upload />
         </div>
         {/* Button component */}
-        <Button content={"Add Event"} icon={MdAddCircle} other="bg-white" />
+        <Link to={"/app/add-events"}>
+          <Button content={"Add Event"} icon={MdAddCircle} other="bg-white" />
+        </Link>
       </div>
       <div className="w-[50%] flex items-center">
         <div className="absolute -right-52">

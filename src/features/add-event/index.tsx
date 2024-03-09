@@ -41,7 +41,7 @@ const AddEvent = () => {
   };
   return (
     <div className="flex gap-x-[10%] w-full relative">
-      <div className="w-[60%] flex flex-col gap-y-8">
+      <div className="w-[70%] flex flex-col gap-y-8">
         <div>
           <h1 className="text-5xl font-semibold mb-2">Add a new Event</h1>
           <p className="font-extralight">Fill the form below</p>
@@ -53,7 +53,12 @@ const AddEvent = () => {
           formData={eventObj}
         />
       </div>
-      <div className="w-[30%] flex items-center">
+      <div className="w-[20%] flex items-center">
+        <img
+          src="/bigCircle.svg"
+          alt="big-circle-svg"
+          className="absolute -right-[150px]"
+        />
         <div className="absolute -right-[300px]">
           <Clock size="sm" />
         </div>
