@@ -3,6 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import EventCard from "./components/EventCard";
 import Button from "../../components/Button";
 import { MdAddCircle } from "react-icons/md";
+import Upload from "../../components/Upload";
 
 const Event = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -74,8 +75,14 @@ const Event = () => {
           </div>
         </div>
       </div>
-      <div className="">
+
+      {/* Lhs */}
+      <div className="w-[30%]">
         <Button content={"Add Event"} icon={MdAddCircle} other="bg-white" />
+        {/*  Upload component */}
+        <div className="mt-10">
+          <Upload />
+        </div>
       </div>
     </div>
   );

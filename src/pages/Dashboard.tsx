@@ -1,5 +1,10 @@
-const Dashboard = () => {
-  return <div>Dashboard</div>;
+import Dashboard from "../features/dashboard";
+const InternalPage = () => {
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 };
 
-export default Dashboard;
+export default InternalPage;

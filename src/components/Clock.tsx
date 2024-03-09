@@ -1,8 +1,12 @@
-const Clock = () => {
+interface ClockProps {
+  size: "lg" | "md" | "sm";
+}
+const Clock = ({ size }: ClockProps) => {
   return (
     <div className="relative">
-      <div className="absolute inset-0 -left-20 top-14 w-[450px] h-[450px] border-2 border-[#05f900] rounded-full ring-2 ring-[#05f900] ring-offset-black ring-offset-[30px]"></div>
-      <img src="/clock.svg" alt="clock-image" className="tranform scale-90" />
+      <div className="absolute inset-0 -left-[60px] top-14 w-[430px] h-[430px] border-2 border-[#05f900] rounded-full"></div>
+      <div className="absolute inset-0 -left-[100px] top-[30px] w-[480px] h-[480px] border-2 border-[#05f900] rounded-full"></div>
+      <img src="/clock.svg" alt="clock-image" className={"tranform scale-90"} />
     </div>
   );
 };
