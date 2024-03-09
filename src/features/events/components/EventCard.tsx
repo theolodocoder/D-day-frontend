@@ -41,7 +41,7 @@ const EventCard = ({ id }: { id: number }) => {
         <div className="flex gap-x-3 text-xs items-center">
           <p>Today</p>
           <BsDot />
-          <div className="flex items-center gap-x-2">
+          <div className="flex items-center gap-x-2 text-green-500">
             <BsSend size={10} />
             Sent
           </div>

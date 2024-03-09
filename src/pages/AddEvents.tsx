@@ -1,5 +1,11 @@
-const AddEvents = () => {
-  return <div>AddEvents</div>;
+import AddEvent from "../features/add-event";
+
+const InternalPage = () => {
+  return (
+    <div>
+      <AddEvent />
+    </div>
+  );
 };
 
-export default AddEvents;
+export default InternalPage;

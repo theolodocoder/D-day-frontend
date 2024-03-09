@@ -16,10 +16,18 @@ const Clock = ({ size }: ClockProps) => {
           <div className="absolute inset-0 -left-[220px] -top-[170px] w-[884px] h-[884px] border-2 border-[#05f900] rounded-full "></div>
         </>
       )}
+      {size == "sm" && (
+        <>
+          <div className="absolute inset-0 left-[120px] top-[70px] w-[400px] h-[400px] border-2 border-[#05f900] rounded-full"></div>
+          <div className="absolute inset-0 left-[80px] top-[25px] w-[490px] h-[490px] border-2 border-[#05f900] rounded-full "></div>
+        </>
+      )}
       <img
         src="/clock.svg"
         alt="clock-image"
-        className={`tranform ${size == "md" && "scale-90"}`}
+        className={`tranform ${size == "md" && "scale-90"} ${
+          size == "sm" && "scale-50"
+        }`}
       />
     </div>
   );

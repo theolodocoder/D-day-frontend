@@ -2,7 +2,7 @@ import { IconType } from "react-icons";
 
 interface ButtonProps {
   content: string;
-  variant?: "solid" | "transparent";
+  variant?: "solid" | "transparent" | "dark";
   icon?: IconType;
   other?: string;
 }
