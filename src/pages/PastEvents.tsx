@@ -1,5 +1,11 @@
-const PastEvents = () => {
-  return <div>PastEvents</div>;
+import PastEvents from "../features/past";
+
+const InternalPage = () => {
+  return (
+    <div>
+      <PastEvents />
+    </div>
+  );
 };
 
-export default PastEvents;
+export default InternalPage;

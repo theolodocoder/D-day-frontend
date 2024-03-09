@@ -36,7 +36,7 @@ const UpcomingEvents = () => {
         </div>
       </div>
       <div className="w-[30%] flex items-center">
-        <EventDetails />
+        <EventDetails type="upcoming" />
       </div>
     </div>
   );
