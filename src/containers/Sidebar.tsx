@@ -43,7 +43,7 @@ const Sidebar = () => {
             <div>
               <NavLink
                 end
-                to={"/sign-out"}
+                to={"/"}
                 className={({ isActive }) =>
                   `${
                     isActive ? "font-semibold bg-none" : "font-normal"
