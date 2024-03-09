@@ -1,5 +1,11 @@
-const UpcomingEvents = () => {
-  return <div>UpcomingEvents</div>;
+import UpcomingEvents from "../features/upcoming";
+
+const InternalPage = () => {
+  return (
+    <div>
+      <UpcomingEvents />
+    </div>
+  );
 };
 
-export default UpcomingEvents;
+export default InternalPage;

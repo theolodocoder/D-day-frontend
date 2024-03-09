@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import Clock from "../components/Clock";
 import Button from "../components/Button";
+import { useState } from "react";
+import Auth from "../features/auth";
 
 export default function Landing() {
+  const [isSlide, setIsSlide] = useState(true);
   return (
     <div className="bg-black w-screen h-screen relative text-white overflow-hidden">
+      {isSlide && <Auth />}
       <div className="w-[90%] mx-auto h-full">
         <nav className="w-full py-10">
           <ul className="flex gap-x-10 items-center h-full py-5">
@@ -26,7 +30,7 @@ export default function Landing() {
               <Button content="Get Started" />
             </div>
           </div>
-          <Clock />
+          <Clock size="md" />
         </main>
         <footer>
           <p className="absolute bottom-10 right-10 cursor-pointer text-sm text-shadow z-10 opacity-70">

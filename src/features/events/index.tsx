@@ -1,24 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import EventCard from "./components/EventCard";
-import Button from "../../components/Button";
+import React, { useState } from "react";
 import { MdAddCircle } from "react-icons/md";
+import Button from "../../components/Button";
+import SearchBar from "../../components/SearchBar";
 import Upload from "../../components/Upload";
+import EventCard from "./components/EventCard";
 
 const Event = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const [expanded, setExpanded] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const handleToggleExpand = () => {
-    setExpanded(!expanded);
-  };
-
-  useEffect(() => {
-    if (expanded) {
-      inputRef.current?.focus();
-    }
-  }, [expanded]);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
@@ -44,23 +32,8 @@ const Event = () => {
               </p>
             </div>
             {/* search icon */}
-            <div className="flex items-center gap-x-3">
-              {expanded ? (
-                <input
-                  ref={expanded && inputRef}
-                  type="text"
-                  value={searchTerm}
-                  onChange={handleChange}
-                  className="bg-transparent w-80 h-12 px-2 border-b border-b-gray-200 text-white outline-none"
-                  placeholder="Search..."
-                />
-              ) : null}
-              <div
-                className="w-12 h-12 rounded-full bg-[#BFC4CB] flex justify-center items-center cursor-pointer"
-                onClick={handleToggleExpand}
-              >
-                <FiSearch fontSize={"24px"} color="black" fontWeight={800} />
-              </div>
+            <div>
+              <SearchBar searchTerm={searchTerm} handleChange={handleChange} />
             </div>
           </div>
           <div className="mt-10">

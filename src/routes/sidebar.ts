@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { MdOutlineDashboard } from "react-icons/md";
+import { MdDashboard } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { PiClockClockwise } from "react-icons/pi";
 import { PiClockCounterClockwise } from "react-icons/pi";
@@ -13,7 +13,7 @@ export interface routeItem {
 const routes: routeItem[] = [
   {
     path: "/app/dashboard",
-    icon: MdOutlineDashboard,
+    icon: MdDashboard,
     name: "Dashboard",
   },
   {

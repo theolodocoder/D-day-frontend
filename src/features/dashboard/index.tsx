@@ -5,8 +5,8 @@ import Clock from "../../components/Clock";
 
 const Dashboard = () => {
   return (
-    <div className="flex gap-x-[20%] w-full">
-      <div className="w-[30%] flex flex-col gap-y-20">
+    <div className="flex gap-x-[10%] w-full relative">
+      <div className="w-[40%] flex flex-col gap-y-20">
         <div className="flex gap-x-5 items-center">
           <div>
             <h1 className="text-5xl font-semibold mb-2">Good Morning,</h1>
@@ -23,8 +23,10 @@ const Dashboard = () => {
         {/* Button component */}
         <Button content={"Add Event"} icon={MdAddCircle} other="bg-white" />
       </div>
-      <div className="w-[50%]">
-        <Clock />
+      <div className="w-[50%] flex items-center">
+        <div className="absolute -right-52">
+          <Clock size="lg" />
+        </div>
       </div>
     </div>
   );
