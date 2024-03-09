@@ -5,10 +5,18 @@ interface ButtonProps {
   variant?: "solid" | "transparent" | "dark";
   icon?: IconType;
   other?: string;
+  type?: "button" | "submit" | "reset";
 }
-export default function Button({ content, variant, icon, other }: ButtonProps) {
+export default function Button({
+  content,
+  type,
+  variant,
+  icon,
+  other,
+}: ButtonProps) {
   return (
     <button
+      type={type || "button"}
       className={`
       ${icon && "flex items-center gap-x-5"}
       h-14 w-48 px-4 py-2 rounded-full ${

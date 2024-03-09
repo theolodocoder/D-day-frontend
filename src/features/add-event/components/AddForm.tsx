@@ -97,6 +97,7 @@ export default function AddForm({
       </FormGroup>
       <div className="mt-10">
         <Button
+          type="submit"
           variant="solid"
           content="Add Event"
           other="bg-black text-white"
